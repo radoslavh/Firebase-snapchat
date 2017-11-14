@@ -14,6 +14,8 @@
 		682981CA1FBAFA5E00183CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682981C91FBAFA5E00183CB6 /* Assets.xcassets */; };
 		682981CD1FBAFA5E00183CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */; };
 		682981D51FBB0BAF00183CB6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 682981D41FBB0BAF00183CB6 /* GoogleService-Info.plist */; };
+		684934741FBB24D500B05430 /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684934731FBB24D500B05430 /* SnapsViewController.swift */; };
+		684934761FBB271300B05430 /* AddSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684934751FBB271300B05430 /* AddSnapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		682981CC1FBAFA5E00183CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		682981CE1FBAFA5E00183CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		682981D41FBB0BAF00183CB6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		684934731FBB24D500B05430 /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
+		684934751FBB271300B05430 /* AddSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSnapViewController.swift; sourceTree = "<group>"; };
 		DD0CD01D7C788F727068DDF9 /* Pods-Firebase-snapchat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-snapchat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase-snapchat/Pods-Firebase-snapchat.debug.xcconfig"; sourceTree = "<group>"; };
 		E1244C0AE41FD029D3EBC9A9 /* Pods-Firebase-snapchat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Firebase-snapchat.release.xcconfig"; path = "Pods/Target Support Files/Pods-Firebase-snapchat/Pods-Firebase-snapchat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +69,8 @@
 			children = (
 				682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */,
 				682981C11FBAFA5E00183CB6 /* SignInViewController.swift */,
+				684934731FBB24D500B05430 /* SnapsViewController.swift */,
+				684934751FBB271300B05430 /* AddSnapViewController.swift */,
 				682981C31FBAFA5E00183CB6 /* Main.storyboard */,
 				682981C91FBAFA5E00183CB6 /* Assets.xcassets */,
 				682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */,
@@ -227,8 +233,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				684934761FBB271300B05430 /* AddSnapViewController.swift in Sources */,
 				682981C21FBAFA5E00183CB6 /* SignInViewController.swift in Sources */,
 				682981C01FBAFA5E00183CB6 /* AppDelegate.swift in Sources */,
+				684934741FBB24D500B05430 /* SnapsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

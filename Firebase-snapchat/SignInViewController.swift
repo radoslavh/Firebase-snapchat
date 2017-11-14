@@ -29,15 +29,14 @@ class SignInViewController: UIViewController {
                         print("creation error")
                     }else{
                         print("create user succesfully")
+                        self.performSegue(withIdentifier: "signInSeque", sender: nil)
                     }
                 })
             }else{
                 print("Sign in")
+                self.performSegue(withIdentifier: "signInSeque", sender: nil)
             }
-            
         }
-        
     }
-    
 }
 
