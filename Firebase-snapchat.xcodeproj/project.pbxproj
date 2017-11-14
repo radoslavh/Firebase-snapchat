@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6023097931CBA37438C503FD /* Pods_Firebase_snapchat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EDF9564B40FFEC0F62ABEE /* Pods_Firebase_snapchat.framework */; };
 		682981C01FBAFA5E00183CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */; };
-		682981C21FBAFA5E00183CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682981C11FBAFA5E00183CB6 /* ViewController.swift */; };
+		682981C21FBAFA5E00183CB6 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682981C11FBAFA5E00183CB6 /* SignInViewController.swift */; };
 		682981C51FBAFA5E00183CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682981C31FBAFA5E00183CB6 /* Main.storyboard */; };
 		682981CA1FBAFA5E00183CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682981C91FBAFA5E00183CB6 /* Assets.xcassets */; };
 		682981CD1FBAFA5E00183CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		06EDF9564B40FFEC0F62ABEE /* Pods_Firebase_snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Firebase_snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		682981BC1FBAFA5E00183CB6 /* Firebase-snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firebase-snapchat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		682981C11FBAFA5E00183CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		682981C11FBAFA5E00183CB6 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		682981C41FBAFA5E00183CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		682981C91FBAFA5E00183CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		682981CC1FBAFA5E00183CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */,
-				682981C11FBAFA5E00183CB6 /* ViewController.swift */,
+				682981C11FBAFA5E00183CB6 /* SignInViewController.swift */,
 				682981C31FBAFA5E00183CB6 /* Main.storyboard */,
 				682981C91FBAFA5E00183CB6 /* Assets.xcassets */,
 				682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */,
@@ -170,12 +170,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Firebase-snapchat/Pods-Firebase-snapchat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682981C21FBAFA5E00183CB6 /* ViewController.swift in Sources */,
+				682981C21FBAFA5E00183CB6 /* SignInViewController.swift in Sources */,
 				682981C01FBAFA5E00183CB6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
