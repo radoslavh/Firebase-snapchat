@@ -29,12 +29,17 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func uploadImg(){
         let imagesFolder = Storage.storage().reference().child("images")
-        let imageData = UIImagePNGRepresentation(imageView.image!)!
-        imagesFolder.child("images.png").putData(imageData, metadata: nil, completion: {(metadata, error) in
+        
+        let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
+        
+        
+        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
             print("we tried to upload")
             if error != nil {
                 print("We have an error!")
             }else{
+                
+                print(metadata?.downloadURLs)
                 self.performSegue(withIdentifier: "selecUsersSegue", sender: nil)
             }
         })
