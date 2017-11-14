@@ -10,7 +10,6 @@
 		682981C01FBAFA5E00183CB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */; };
 		682981C21FBAFA5E00183CB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682981C11FBAFA5E00183CB6 /* ViewController.swift */; };
 		682981C51FBAFA5E00183CB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682981C31FBAFA5E00183CB6 /* Main.storyboard */; };
-		682981C81FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 682981C61FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodeld */; };
 		682981CA1FBAFA5E00183CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 682981C91FBAFA5E00183CB6 /* Assets.xcassets */; };
 		682981CD1FBAFA5E00183CB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -20,7 +19,6 @@
 		682981BF1FBAFA5E00183CB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		682981C11FBAFA5E00183CB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		682981C41FBAFA5E00183CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		682981C71FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Firebase_snapchat.xcdatamodel; sourceTree = "<group>"; };
 		682981C91FBAFA5E00183CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		682981CC1FBAFA5E00183CB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		682981CE1FBAFA5E00183CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 				682981C91FBAFA5E00183CB6 /* Assets.xcassets */,
 				682981CB1FBAFA5E00183CB6 /* LaunchScreen.storyboard */,
 				682981CE1FBAFA5E00183CB6 /* Info.plist */,
-				682981C61FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodeld */,
 			);
 			path = "Firebase-snapchat";
 			sourceTree = "<group>";
@@ -139,7 +136,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				682981C81FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodeld in Sources */,
 				682981C21FBAFA5E00183CB6 /* ViewController.swift in Sources */,
 				682981C01FBAFA5E00183CB6 /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +277,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = "Firebase-snapchat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.radoslav.Firebase-snapchat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -296,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LH3ZH362W;
 				INFOPLIST_FILE = "Firebase-snapchat/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.radoslav.Firebase-snapchat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,19 +324,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		682981C61FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				682981C71FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodel */,
-			);
-			currentVersion = 682981C71FBAFA5E00183CB6 /* Firebase_snapchat.xcdatamodel */;
-			path = Firebase_snapchat.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 682981B41FBAFA5E00183CB6 /* Project object */;
 }
