@@ -22,7 +22,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         imagePicker.delegate = self
     }
     
-    @IBAction func onNextAction(_ sender: Any) {
+    @IBAction func onNextTapped(_ sender: Any) {
         nextButton.isEnabled = false
         uploadImg()
     }
@@ -32,23 +32,17 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        
         imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
-            print("we tried to upload")
-            if error != nil {
-                print("We have an error!")
+            print("We tried to upload")
+            if error == nil {
+                self.performSegue(withIdentifier: "selecUsersSegue", sender: metadata?.downloadURL()!.absoluteString)
             }else{
-                
-                print(metadata?.downloadURLs)
-                self.performSegue(withIdentifier: "selecUsersSegue", sender: nil)
+                print("We have an error!")
             }
         })
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
-    @IBAction func onCameraAction(_ sender: Any) {
+    @IBAction func onCameraTapped(_ sender: Any) {
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
@@ -59,6 +53,11 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         imageView.image = image
         imageView.backgroundColor = UIColor.clear
         imagePicker.dismiss(animated: true, completion: nil)
-        nextButton.isEnabled = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! SelectUserViewController
+        nextVC.desc = descriptionTextField.text!
+        nextVC.imageURL = sender as! String
     }
 }

@@ -16,19 +16,19 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
-    @IBAction func signInAction(_ sender: Any) {
+    @IBAction func signInTapped(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             print ("attempt")
             if error != nil{
-                print("Error: \(error)")
+                print("Error: \(String(describing: error))")
                 Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: { (user, error) in
                     if error  != nil {
                         print("creation error")
                     }else{
                         print("create user succesfully")
+                        let users = Database.database().reference().child("users").child(user!.uid).child("email").setValue("\(user!.email!)")
                         self.performSegue(withIdentifier: "signInSeque", sender: nil)
                     }
                 })

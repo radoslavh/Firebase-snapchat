@@ -17,11 +17,11 @@ class SnapsViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func addSnapAction(_ sender: Any) {
+    @IBAction func addSnapTapped(_ sender: Any) {
         performSegue(withIdentifier: "addSnapSeque", sender: nil)
     }
     
-    @IBAction func logoutAction(_ sender: Any) {
+    @IBAction func logoutTapped(_ sender: Any) {
         dismiss(animated: true)
     }
 }
