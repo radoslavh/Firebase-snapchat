@@ -28,7 +28,7 @@ class SignInViewController: UIViewController {
                         print("creation error")
                     }else{
                         print("create user succesfully")
-                        let users = Database.database().reference().child("users").child(user!.uid).child("email").setValue("\(user!.email!)")
+                        Database.database().reference().child("users").child(user!.uid).child("email").setValue("\(user!.email!)")
                         self.performSegue(withIdentifier: "signInSeque", sender: nil)
                     }
                 })

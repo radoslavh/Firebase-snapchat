@@ -16,9 +16,11 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var imageView: UIImageView!
     
     var imagePicker = UIImagePickerController()
+    var uuid = NSUUID().uuidString
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        nextButton.isEnabled = false
         imagePicker.delegate = self
     }
     
@@ -32,7 +34,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         let imageData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        imagesFolder.child("\(NSUUID().uuidString).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
+        imagesFolder.child("\(uuid).jpg").putData(imageData, metadata: nil, completion: {(metadata, error) in
             print("We tried to upload")
             if error == nil {
                 self.performSegue(withIdentifier: "selecUsersSegue", sender: metadata?.downloadURL()!.absoluteString)
@@ -45,6 +47,7 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func onCameraTapped(_ sender: Any) {
         imagePicker.sourceType = .camera
         imagePicker.allowsEditing = false
+        nextButton.isEnabled = true
         present(imagePicker, animated: true, completion: nil)
     }
     
@@ -59,5 +62,6 @@ class AddSnapViewController: UIViewController, UIImagePickerControllerDelegate, 
         let nextVC = segue.destination as! SelectUserViewController
         nextVC.desc = descriptionTextField.text!
         nextVC.imageURL = sender as! String
+        nextVC.uuid = uuid
     }
 }
